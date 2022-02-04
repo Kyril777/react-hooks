@@ -1,3 +1,13 @@
+/* setTimeout application. */
+import React, { useEffect } from ‘react’;
+const tutorials=(props)=>{
+   useEffect( ()=>{
+      console.log(‘hello’);
+      setTimeout( ()=>{ alert(‘Hola mundo!’); }, 5000);
+   });
+}
+
+/* Button click application. */
 import React,{useState, useEffect} from "react";
 const Clicker = () => {
     const [click,setClick]=useState(0);
