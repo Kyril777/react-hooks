@@ -1,3 +1,16 @@
+/* Baisc use of useState. */
+
+import { useState } from "react";
+import ReactDOM from "react-dom";
+
+function FavoriteColor() {
+  const [capital, setCapital] = useState("Ankara");
+
+  return <h1>The capital of Turkey is is {capital}!</h1>
+}
+
+ReactDOM.render(<FavoriteColor />, document.getElementById('root'));
+
 /* useState for basic clicktracker. */
 import React, { useState } from 'react';
 
