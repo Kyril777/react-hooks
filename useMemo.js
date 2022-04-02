@@ -1,4 +1,6 @@
-/* useMemo. */
+/* useMemo returns a memoized value. */
+
+const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
 
 const Items = React.useMemo(() =>
   listOfItems.map(item => ({
