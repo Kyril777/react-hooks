@@ -13,3 +13,24 @@ const App = () {
     </div>
   );
 };
+
+
+
+import { useId } from 'react'
+
+function App() {
+  const id = useId();
+
+  return (
+    <form>
+      <div>
+        <label htmlFor={`email-${id}`}>Email</label>
+        <input id={`email-${id}`} type="text" placeholder='Email' />
+      </div>
+      <div>
+        <label htmlFor={`password-${id}`}>Password</label>
+        <input id={`password-${id}`} type="password" placeholder='Password' />
+      </div>
+    </form>
+  );
+}
