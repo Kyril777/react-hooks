@@ -13,3 +13,16 @@ export default function App() {
     </div>
   );
 }
+
+
+/* useBoolean for toggle state. */
+const hello = () => {
+  const [ state, toggleState ] = useBoolean();
+  
+  return (
+    <div class="container">
+        <button onClick={toggleState}>Toggle</button>
+        <span className="state">{ state ? "on" : "off"}</span>
+    </div>
+  );
+}
