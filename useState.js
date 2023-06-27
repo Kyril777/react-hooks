@@ -48,3 +48,23 @@ function ClickTracker2() {
     </div>
   );
 }
+
+
+/* Another clicktracker. */
+import { useState } from 'react';
+
+const Count = () => {
+  const [count, setCount] = useState(0);
+  cost clickHandler = () => {
+    setCount(count + 1);
+  };
+  return (
+    <div>
+      <h1>You have clicked {count} many times.</h1>
+      <button onClick={clickHandler}>Click Me</button>
+    </div>
+  )  
+}
+
+
+
