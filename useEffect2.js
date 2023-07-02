@@ -21,3 +21,21 @@ function Counter() {
 }
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Counter />);
+
+
+/* Employ the about controller API to avoid memory leaks. */
+import { useEffect } from "react";
+
+useEffect(() => {
+  const control = new AbortController();
+  const signal = control.signal;
+
+  fetch(`/api/users/${id}`, { signal })
+    .then((res) => res.json())
+    .then((data) => {
+      setUser(data);
+    });
+    return () => {
+      control.abort();
+    };
+}, [id]);
