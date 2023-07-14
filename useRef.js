@@ -48,3 +48,24 @@ function App() {
 }
 
 ReactDOM.render(<App />, document.getElementById("root"));
+
+
+/* useRef to render a textbox and button. */
+import React, { useRef } from 'react';
+
+const MyComponent = () => {
+  const inputRef = useRef(null);
+
+  const handleButtonClick = () => {
+    inputRef.current.focus();
+  };
+
+  return (
+    <div>
+      <input type="text" ref={inputRef} />
+      <button onClick={handleButtonClick}>Input</button>
+    </div>
+  )
+}
+
+export default MyComponent;
